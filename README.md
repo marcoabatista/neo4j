@@ -169,3 +169,241 @@ MATCH (a:Person)-[r:ACTED_IN]->(m:Movie)
 WHERE m.title in r.roles
 RETURN  m.title as Movie, a.name as Actor
 ```
+### Exercício 5 – Controlling query processing
+Exercise 5.1: Retrieve data using multiple MATCH patterns.
+```
+
+```
+Exercise 5.2: Retrieve particular nodes that have a relationship.
+```
+
+```
+Exercise 5.3: Modify the query to retrieve nodes that are exactly three hops away.
+```
+
+```
+Exercise 5.4: Modify the query to retrieve nodes that are one and two hops away.
+```
+
+```
+Exercise 5.5: Modify the query to retrieve particular nodes that are connected no matter how many hops are required.
+```
+
+```
+Exercise 5.6: Specify optional data to be retrieved during the query.
+```
+
+```
+Exercise 5.7: Retrieve nodes by collecting a list.
+```
+
+```
+Exercise 5.9: Retrieve nodes as lists and return data associated with the corresponding lists.
+```
+
+```
+Exercise 5.10: Retrieve nodes and their relationships as lists.
+```
+
+```
+Exercise 5.11: Retrieve the actors who have acted in exactly five movies.
+```
+
+```
+Exercise 5.12: Retrieve the movies that have at least 2 directors with other optional data.
+```
+
+```
+### Exercício 6 – Controlling results returned
+Exercise 6.1: Execute a query that returns duplicate records.
+```
+
+```
+Exercise 6.2: Modify the query to eliminate duplication.
+```
+
+```
+Exercise 6.3: Modify the query to eliminate more duplication.
+```
+
+```
+Exercise 6.4: Sort results returned.
+```
+
+```
+Exercise 6.5: Retrieve the top 5 ratings and their associated movies.
+```
+
+```
+Exercise 6.6: Retrieve all actors that have not appeared in more than 3 movies.
+```
+
+```
+### Exercício 7 – Working with cypher data
+Exercise 7.1: Collect and use lists.
+```
+
+```
+Exercise 7.2: Collect a list.
+```
+
+```
+Exercise 7.3: Unwind a list.
+```
+
+```
+Exercise 7.4: Perform a calculation with the date type.
+```
+
+```
+### Exercício 8 – Creating nodes
+Exercise 8.1: Create a Movie node.
+```
+
+```
+Exercise 8.2: Retrieve the newly-created node.
+```
+
+```
+Exercise 8.3: Create a Person node.
+```
+
+```
+Exercise 8.4: Retrieve the newly-created node.
+```
+
+```
+Exercise 8.5: Add a label to a node.
+```
+
+```
+Exercise 8.6: Retrieve the node using the new label.
+```
+
+```
+Exercise 8.7: Add the Female label to selected nodes.
+```
+
+```
+Exercise 8.8: Retrieve all Female nodes.
+```
+
+```
+Exercise 8.9: Remove the Female label from the nodes that have this label.
+```
+
+```
+Exercise 8.10: View the current schema of the graph.
+```
+
+```
+Exercise 8.11: Add properties to a movie.
+```
+
+```
+Exercise 8.12: Retrieve an OlderMovie node to confirm the label and properties.
+```
+
+```
+Exercise 8.13: Add properties to the person, Robin Wright.
+```
+
+```
+Exercise 8.14: Retrieve an updated Person node.
+```
+
+```
+Exercise 8.15: Remove a property from a Movie node.
+```
+
+```
+Exercise 8.16: Retrieve the node to confirm that the property has been removed.
+```
+
+```
+Exercise 8.17: Remove a property from a Person node.
+```
+
+```
+Exercise 8.18: Retrieve the node to confirm that the property has been removed.
+```
+
+```
+### Exercício 9 – Creating relationships
+Exercise 9.1: Create ACTED_IN relationships.
+```
+
+```
+Exercise 9.2: Create DIRECTED relationships.
+```
+
+```
+Exercise 9.3: Create a HELPED relationship.
+```
+
+```
+Exercise 9.4: Query nodes and new relationships.
+```
+
+```
+Exercise 9.5: Add properties to relationships.
+```
+
+```
+Exercise 9.6: Add a property to the HELPED relationship.
+```
+
+```
+Exercise 9.7: View the current list of property keys in the graph.
+```
+
+```
+Exercise 9.8: View the current schema of the graph.
+```
+
+```
+Exercise 9.9: Retrieve the names and roles for actors.
+```
+
+```
+Exercise 9.10: Retrieve information about any specific relationships.
+```
+
+```
+Exercise 9.11: Modify a property of a relationship.
+```
+
+```
+Exercise 9.12: Remove a property from a relationship.
+```
+
+```
+Exercise 9.13: Confirm that your modifications were made to the graph.
+```
+
+```
+### Exercício 10 – Deleting nodes and relationships
+Exercise 10.1: Delete a relationship.
+```
+
+```
+Exercise 10.2: Confirm that the relationship has been deleted.
+```
+
+```
+Exercise 10.3: Retrieve a movie and all of its relationships.
+```
+
+```
+Exercise 10.4: Try deleting a node without detaching its relationships.
+```
+
+```
+Exercise 10.5: Delete a Movie node, along with its relationships.
+```
+
+```
+Exercise 10.6: Confirm that the Movie node has been deleted.
+```
+
+```
