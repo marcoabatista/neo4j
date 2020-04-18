@@ -132,3 +132,32 @@ Exercise 4.6: Retrieve all people in the graph that do not have a property.
 ```
 MATCH (a:Person) WHERE NOT exists(a.born) RETURN a
 ```
+Exercise 4.7: Retrieve all people related to movies where the relationship has a property.
+```
+call db.schema.relTypeProperties
+MATCH (a:Person)-[rel]->(m:Movie) WHERE exists(rel.roles) RETURN a.name as Name, m.title as Movie, rel.roles as Roles
+```
+Exercise 4.8: Retrieve all actors whose name begins with James.
+```
+MATCH (a:Person)-[:ACTED_IN]->(:Movie) WHERE a.name STARTS WITH 'James' RETURN a.name
+```
+Exercise 4.9: Retrieve all all REVIEW relationships from the graph with filtered results.
+```
+MATCH (:Person)-[rel:REVIEWED]->(m:Movie) WHERE toLower(rel.summary) CONTAINS 'fun' RETURN  m.title as Movie, rel.summary as Review, rel.rating as Rating
+```
+Exercise 4.10: Retrieve all people who have produced a movie, but have not directed a movie.
+```
+MATCH (a:Person)-[:PRODUCED]->(m:Movie) WHERE NOT ((a)-[:DIRECTED]->(:Movie)) RETURN a.name, m.title
+```
+Exercise 4.11: Retrieve the movies and their actors where one of the actors also directed the movie.
+```
+
+```
+Exercise 4.12: Retrieve all movies that were released in a set of years.
+```
+
+```
+Exercise 4.13: Retrieve the movies that have an actor’s role that is the name of the movie.
+```
+
+```
