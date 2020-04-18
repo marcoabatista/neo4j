@@ -143,7 +143,9 @@ MATCH (a:Person)-[:ACTED_IN]->(:Movie) WHERE a.name STARTS WITH 'James' RETURN a
 ```
 Exercise 4.9: Retrieve all all REVIEW relationships from the graph with filtered results.
 ```
-MATCH (:Person)-[rel:REVIEWED]->(m:Movie) WHERE toLower(rel.summary) CONTAINS 'fun' RETURN  m.title as Movie, rel.summary as Review, rel.rating as Rating
+MATCH (a:Person)-[r:ACTED_IN]->(m:Movie)
+WHERE m.title in r.roles
+RETURN  m.title as Movie, a.name as Actor
 ```
 Exercise 4.10: Retrieve all people who have produced a movie, but have not directed a movie.
 ```
