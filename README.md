@@ -100,3 +100,35 @@ Exercise 3.5: Retrieve information about the roles that Tom Hanks acted in.
 ```
 MATCH (m:Movie)-[rel:ACTED_IN]-(:Person {name: 'Tom Hanks'}) RETURN m.title, rel.roles
 ```
+### Exercício 4 – Filtering queries using WHERE clause
+Exercise 4.1: Retrieve all movies that Tom Cruise acted in.
+```
+MATCH (a:Person)-[:ACTED_IN]->(m:Movie)
+WHERE a.name = 'Tom Cruise'
+RETURN m.title as Movie
+```
+Exercise 4.2: Retrieve all people that were born in the 70’s.
+```
+MATCH (a:Person)
+WHERE a.born >= 1970 AND a.born < 1980
+RETURN a.name as Nome, a.born as `Ano Nascimento`
+```
+Exercise 4.3: Retrieve the actors who acted in the movie The Matrix who were born after 1960.
+```
+MATCH (a:Person)-[rel:ACTED_IN]-(m:Movie)
+WHERE a.born > 1960
+AND m.title = 'The Matrix'
+RETURN a.name as Nome, a.born as `Ano Nascimento`, m.title as `Filme`
+```
+Exercise 4.4: Retrieve all movies by testing the node label and a property.
+```
+MATCH (p) WHERE p:Person AND p.born >= 1960 RETURN p.name
+```
+Exercise 4.5: Retrieve all people that wrote movies by testing the relationship between two nodes.
+```
+MATCH (a)-[rel]->(m) WHERE a:Person AND type(rel) = 'WROTE' AND m:Movie RETURN a.name as Name, m.title as Movie
+```
+Exercise 4.6: Retrieve all people in the graph that do not have a property.
+```
+MATCH (a:Person) WHERE NOT exists(a.born) RETURN a
+```
